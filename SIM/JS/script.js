@@ -75,46 +75,55 @@ if (incidentForm) {
 
 }
 
-
 // -------------------------------
 // DISPLAY REPORTS
 // -------------------------------
 const reportTable = document.getElementById("reportTable");
 
-if(reportTable){
+if (reportTable) {
 
     const userType = localStorage.getItem("userType");
 
-    if(userType !== "admin"){
+    if (userType !== "admin") {
 
         alert("Access Denied! Admin Only.");
-
         window.location.href = "index.html";
 
-    }else{
+    } else {
 
         const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
         reportTable.innerHTML = "";
 
-        reports.forEach(function(report,index){
+        if (reports.length === 0) {
 
-            reportTable.innerHTML += `
-
-            <tr>
-
-                <td>${index + 1}</td>
-                <td>${report.incident}</td>
-                <td>${report.location}</td>
-                <td>${report.date}</td>
-                <td>${report.status}</td>
-
-            </tr>
-
+            reportTable.innerHTML = `
+                <tr>
+                    <td colspan="8">No incident reports available.</td>
+                </tr>
             `;
 
-        });
+        } else {
+
+            reports.forEach(function(report, index) {
+
+                reportTable.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${report.name || "Anonymous"}</td>
+                        <td>${report.role}</td>
+                        <td>${report.incident}</td>
+                        <td>${report.location}</td>
+                        <td>${report.date}</td>
+                        <td>${report.time}</td>
+                        <td>${report.status}</td>
+                    </tr>
+                `;
+
+            });
+
+        }
 
     }
 
-                }
+}
