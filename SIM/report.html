@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident - SIM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<header>
+    <h1>Security Incident Mapping (SIM)</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report.html">Report Incident</a></li>
+            <li><a href="reports.html">View Reports</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="text-align:center; margin-top:30px;">
+        Report a Security Incident
+    </h2>
+
+    <form id="incidentForm">
+
+        <label for="name">Full Name (Optional)</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="role">Role</label>
+        <select id="role" required>
+            <option value="">Select Role</option>
+            <option>Student</option>
+            <option>Staff</option>
+            <option>Landlord</option>
+        </select>
+
+        <label for="incident">Incident Type</label>
+        <select id="incident" required>
+            <option value="">Select Incident</option>
+            <option>Theft</option>
+            <option>Stabbing</option>
+            <option>Assault</option>
+            <option>Rape</option>
+            <option>Cultism</option>
+            <option>Robbery</option>
+            <option>Other</option>
+        </select>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Enter location" required>
+
+        <label for="date">Date of Incident</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Time</label>
+        <input type="time" id="time">
+
+        <label for="description">Description</label>
+        <textarea id="description" rows="6"
+            placeholder="Describe what happened..."
+            required></textarea>
+
+        <label for="image">Upload Evidence (Optional)</label>
+        <input type="file" id="image" accept="image/*">
+
+        <button type="submit">Submit Report</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Security Incident Mapping (SIM)</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+          </html>
