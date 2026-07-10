@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Incident - SIM</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
+
     <h1>Security Incident Mapping (SIM)</h1>
 
     <nav>
@@ -19,9 +21,11 @@
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+
 </header>
 
 <section>
+
     <h2 style="text-align:center; margin-top:30px;">
         Report a Security Incident
     </h2>
@@ -29,55 +33,88 @@
     <form id="incidentForm">
 
         <label for="name">Full Name (Optional)</label>
-        <input type="text" id="name" placeholder="Enter your name">
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+        >
 
         <label for="role">Role</label>
         <select id="role" required>
+
             <option value="">Select Role</option>
-            <option>Student</option>
-            <option>Staff</option>
-            <option>Landlord</option>
+            <option value="Student">Student</option>
+            <option value="Staff">Staff</option>
+            <option value="Landlord">Landlord</option>
+
         </select>
 
         <label for="incident">Incident Type</label>
         <select id="incident" required>
+
             <option value="">Select Incident</option>
-            <option>Theft</option>
-            <option>Stabbing</option>
-            <option>Assault</option>
-            <option>Rape</option>
-            <option>Cultism</option>
-            <option>Robbery</option>
-            <option>Other</option>
+            <option value="Theft">Theft</option>
+            <option value="Robbery">Robbery</option>
+            <option value="Assault">Assault</option>
+            <option value="Stabbing">Stabbing</option>
+            <option value="Rape">Rape</option>
+            <option value="Cultism">Cultism</option>
+            <option value="Other">Other</option>
+
         </select>
 
         <label for="location">Location</label>
-        <input type="text" id="location" placeholder="Enter location" required>
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter the incident location"
+            required
+        >
 
-        <label for="date">Date of Incident</label>
-        <input type="date" id="date" required>
+        <label for="date">Date</label>
+        <input
+            type="date"
+            id="date"
+            required
+        >
 
         <label for="time">Time</label>
-        <input type="time" id="time">
+        <input
+            type="time"
+            id="time"
+            required
+        >
 
         <label for="description">Description</label>
-        <textarea id="description" rows="6"
-            placeholder="Describe what happened..."
-            required></textarea>
+        <textarea
+            id="description"
+            rows="5"
+            placeholder="Describe the incident..."
+            required
+        ></textarea>
 
         <label for="image">Upload Evidence (Optional)</label>
-        <input type="file" id="image" accept="image/*">
+        <input
+            type="file"
+            id="image"
+            accept="image/*"
+        >
 
-        <button type="submit">Submit Report</button>
+        <button type="submit">
+            Submit Report
+        </button>
 
     </form>
+
 </section>
 
 <footer>
-    <p>&copy; 2026 Security Incident Mapping (SIM)</p>
+
+    <p>&copy; 2026 Security Incident Mapping (SIM). All Rights Reserved.</p>
+
 </footer>
 
 <script src="js/script.js"></script>
 
 </body>
-          </html>
+</html>
